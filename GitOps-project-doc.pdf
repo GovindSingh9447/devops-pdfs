@@ -1,0 +1,64 @@
+Trying to build the Ultimate CI/CD Pipeline – GitOps for Deployment! 
+
+I am working on an end-to-end CI/CD pipeline that seamlessly integrates Continuous Integration (CI) and Continuous Deployment (CD), using GitOps for the CD process.
+
+This project leverages:
+🔹 Jenkins for CI Automation
+🔹 SonarQube for Code Quality Analysis
+🔹 Helm for Kubernetes Package Management
+🔹 Argo CD for GitOps-based Deployments
+🔹 Complete Step-by-Step Setup:
+
+Prerequisites:
+✅ Java application code in a Git repository
+✅ Jenkins server
+✅ Kubernetes cluster
+✅ Helm package manager
+✅ Argo CD
+
+ Step 1: Install Required Jenkins Plugins
+🔹 Git plugin
+🔹 Maven Integration plugin
+🔹 Pipeline plugin
+🔹 Kubernetes Continuous Deploy plugin
+
+Step 2: Create a New Jenkins Pipeline
+🔹 Configure a pipeline job in Jenkins with the Git repository URL
+🔹 Add a Jenkinsfile to define the pipeline
+
+Step 3: Define the Pipeline Stages
+🔹 Stage 1: Checkout the source code
+🔹 Stage 2: Build the Java application using Maven
+🔹 Stage 3: Run unit tests (JUnit & Mockito)
+🔹 Stage 4: Analyze code quality with SonarQube
+🔹 Stage 5: Package the application into a JAR file
+🔹 Stage 6: Deploy to test environment using Helm
+🔹 Stage 7: Run user acceptance tests (Selenium)
+🔹 Stage 8: Promote to production with Argo CD
+
+ Step 4: Configure Jenkins Stages
+🔹 Use Git plugin for code checkout
+🔹 Use Maven Integration plugin for build & packaging
+🔹 Run tests using JUnit & Mockito
+🔹 Perform SonarQube analysis
+🔹 Deploy to Kubernetes with Helm
+🔹 Use Argo CD for GitOps-based deployment
+
+Step 5: Set Up Argo CD
+🔹 Install Argo CD on the Kubernetes cluster
+🔹 Set up a Git repository for Argo CD to track Helm charts & manifests
+🔹 Configure Helm charts for deployment
+
+Step 6: Integrate Jenkins with Argo CD
+🔹 Add Argo CD API token to Jenkins credentials
+🔹 Include the Argo CD deployment step in the Jenkins pipeline
+
+Step 7: Run the Pipeline
+🔹 Trigger the Jenkins pipeline
+🔹 Monitor all stages & troubleshoot issues
+
+
+💡 Why GitOps?
+By using Argo CD to track Helm charts and Kubernetes manifests, deployments become declarative, version-controlled, and rollback-friendly, ensuring a more reliable release process.
+
+I'm excited about this project and looking forward to completing it! If you've worked on CI/CD pipelines with GitOps, I’d love to hear your thoughts. How do you structure your pipelines? Any challenges you faced?
